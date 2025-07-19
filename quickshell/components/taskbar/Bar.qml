@@ -176,7 +176,7 @@ Scope {
 
                             RowLayout { // Content
                                 id: leftSectionRowLayout
-                                anchors.fill: parent
+                                // anchors.fill: parent
                                 spacing: 10 
 
                                 // RippleButton {
@@ -236,10 +236,13 @@ Scope {
                                 //     }
                                 // }
                                 }
+                                 BarGroup {
+                        
                                  Media {
+                                    Layout.preferredWidth: 250
                                     visible: barRoot.useShortenedForm < 2
-                                    Layout.fillWidth: true
                                 }
+                                 }
                             }
                         }
                     }
@@ -247,11 +250,14 @@ Scope {
                     RowLayout { // Middle section
                         id: middleSection
                         anchors.centerIn: parent
-                        spacing: Config.options?.bar.borderless ? 4 : 8                     
+                        spacing: Config.options?.bar.borderless ? 4 : 8         
+                            Layout.preferredWidth: 700
+                            Layout.minimumWidth: 700
+                            Layout.fillWidth: true
+
 
                         BarGroup {
                             id: leftCenterGroup
-                            Layout.preferredWidth: barRoot.centerSideModuleWidth
                             Layout.fillHeight: true
 
                             
@@ -268,21 +274,21 @@ Scope {
 
                         
 
-                        MouseArea {
-                            id: rightCenterGroup
-                            implicitWidth: rightCenterGroupContent.implicitWidth
-                            implicitHeight: rightCenterGroupContent.implicitHeight
-                            Layout.preferredWidth: barRoot.centerSideModuleWidth
-                            Layout.fillHeight: true
+                        // MouseArea {
+                        //     id: rightCenterGroup
+                        //     implicitWidth: rightCenterGroupContent.implicitWidth
+                        //     implicitHeight: rightCenterGroupContent.implicitHeight
+                        //     Layout.preferredWidth: barRoot.centerSideModuleWidth
+                        //     Layout.fillHeight: true
 
-                            onPressed: {
-                                Hyprland.dispatch('global quickshell:sidebarRightToggle');
-                            }
-                        }
+                        //     onPressed: {
+                        //         Hyprland.dispatch('global quickshell:sidebarRightToggle');
+                        //     }
+                        // }
 
-                        VerticalBarSeparator {
-                            visible: Config.options.bar.borderless && Config.options.bar.weather.enable
-                        }
+                        // VerticalBarSeparator {
+                        //     visible: Config.options.bar.borderless && Config.options.bar.weather.enable
+                        // }
                     }
 
                     MouseArea { // Right side | scroll to change volume
@@ -345,7 +351,9 @@ Scope {
                         
 
                         Item {
-                            anchors.fill: parent
+                                anchors.right: parent.right
+
+                            // anchors.fill: parent
                             implicitHeight: rightSectionRowLayout.implicitHeight
                             implicitWidth: rightSectionRowLayout.implicitWidth
 
@@ -446,22 +454,25 @@ Scope {
                                     }
                                 }
 
-                                SysTray {
-                                    bar: barRoot
-                                    visible: barRoot.useShortenedForm === 0
-                                    Layout.fillWidth: false
-                                    Layout.fillHeight: true
-                                }
-                                 BatteryIndicator {
+                                // SysTray {
+                                //     bar: barRoot
+                                //     visible: barRoot.useShortenedForm === 0
+                                //     Layout.fillWidth: false
+                                //     Layout.fillHeight: true
+                                // }
+                                BarGroup {
+                                    BatteryIndicator {
                                     visible: (barRoot.useShortenedForm < 2 && UPower.displayDevice.isLaptopBattery)
                                     Layout.alignment: Qt.AlignVCenter
                                 }
-
                                  ClockWidget {
                                     showDate: (Config.options.bar.verbose && barRoot.useShortenedForm < 2)
                                     Layout.alignment: Qt.AlignVCenter
                                     Layout.fillWidth: true
                                 }
+
+                                }
+                                 
 
                                 // Weather
                                 // Loader {
