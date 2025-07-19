@@ -1,0 +1,83 @@
+# Machine/user-specific configs
+dconf/
+monitors.xml*
+session/
+signond/
+Trashrc
+pulse/
+pipewire.backup
+wireplumber*
+baloofileinformationrc
+baloofilerc
+bluedevilglobalrc
+device_automounter_kcmrc
+kactivitymanagerdrc
+kactivitymanagerd-statsrc
+manjaro*
+procps/
+systemd/
+evolution/
+
+# Proprietary apps
+discord/
+spotify/
+onedrive/
+Microsoft*/
+teams/
+google-chrome/
+opera/
+falkon/
+unity3d/
+libreoffice/
+RawTherapee/
+StarUML/
+Cursor/
+cursor-flags.conf
+
+# Browsers & DEs
+nautilus/
+nwg-look/
+lxsession/
+xfce4/
+xdg-desktop-portal-kderc/
+gnome-session/
+
+# Editors/IDEs
+Code*/
+Electron/
+brinkervii/
+illogical-impulse/
+wasistlos/
+Unknown Organization/
+
+# Misc/system libs
+glib-2.0/
+go/
+goa-1.0/
+libaccounts-glib/
+
+# Plasma/KDE transient or machine-bound
+KDE/
+kdeconnect/
+kded5rc
+kded6rc
+kdedefaults
+kdeglobals
+kde.org
+kwinoutputconfig.json
+knfsshare
+PlasmaDiscoverUpdates
+plasma-workspace
+menus
+kconf_updaterc
+kscreenlockerrc
+ksmserverrc
+ksplashrc
+ktimezonedrc
+
+# Other backups or temp files
+*.bak
+*~
+
+# fuck eww
+eww/

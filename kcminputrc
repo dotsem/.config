@@ -1,0 +1,11 @@
+[Keyboard]
+NumLock=0
+
+[Libinput][7511][64096][Beken 2.4G Wireless Device]
+PointerAcceleration=-0.700
+PointerAccelerationProfile=1
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true
+XLbInptAccelProfileFlat=true
+XLbInptPointerAcceleration=-0.8

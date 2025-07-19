@@ -1,0 +1,5 @@
+[Plugins]
+krunner_webshortcutsEnabled=false
+
+[Plugins][Favorites]
+plugins=krunner_services,krunner_systemsettings

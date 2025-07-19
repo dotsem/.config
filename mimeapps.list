@@ -1,0 +1,26 @@
+[Added Associations]
+application/x-roblox-rbxl=roblox-studio.desktop;
+application/x-roblox-rbxlx=roblox-studio.desktop;
+image/jpeg=gwenview-2.desktop;gwenview.desktop;
+x-scheme-handler/http=google-chrome.desktop;
+x-scheme-handler/https=google-chrome.desktop;
+x-scheme-handler/msteams=teams.desktop;
+x-scheme-handler/roblox=roblox-player.desktop;
+x-scheme-handler/roblox-player=roblox-player.desktop;
+x-scheme-handler/roblox-studio=roblox-studio.desktop;
+x-scheme-handler/roblox-studio-auth=roblox-studio-auth.desktop;
+
+[Default Applications]
+application/x-roblox-rbxl=roblox-studio.desktop
+application/x-roblox-rbxlx=roblox-studio.desktop
+image/jpeg=gwenview-2.desktop;
+text/html=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/roblox=roblox-player.desktop
+x-scheme-handler/roblox-player=roblox-player.desktop
+x-scheme-handler/roblox-studio=roblox-studio.desktop
+x-scheme-handler/roblox-studio-auth=roblox-studio-auth.desktop
+x-scheme-handler/unknown=google-chrome.desktop
