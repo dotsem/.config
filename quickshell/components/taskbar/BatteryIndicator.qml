@@ -14,14 +14,28 @@ Item {
     readonly property bool isCharging: Battery.isCharging
     readonly property bool isPluggedIn: Battery.isPluggedIn
     readonly property real percentage: Battery.percentage
+    readonly property bool isFull: percentage >= Config.options.battery.full / 100
     readonly property bool isLow: percentage <= Config.options.battery.low / 100
-    readonly property color batteryLowBackground: Appearance.m3colors.darkmode ? Appearance.m3colors.m3error : Appearance.m3colors.m3errorContainer
-    readonly property color batteryLowOnBackground: Appearance.m3colors.darkmode ? Appearance.m3colors.m3errorContainer : Appearance.m3colors.m3error
+    readonly property bool isCritical: percentage <= Config.options.battery.critical / 100
 
-    readonly property color textColor: Appearance.m3colors.darkmode ? Appearance.batteryColor.normalDark : Appearance.batteryColor.normalLight
+    readonly property color textColor: Appearance.m3colors.darkmode ? Appearance.batteryColor.normalLight :  Appearance.batteryColor.normalDark 
 
     implicitWidth: rowLayout.implicitWidth + rowLayout.spacing * 2
     implicitHeight: 32
+
+    function colorBasedOnState(normalColor: color, chargeColor: color, fullBatteryColor: color, lowBatteryColor: color, criticalBatteryColor: color): color {
+        if (isFull) {
+            return fullBatteryColor
+        } else if (isCharging) {
+            return chargeColor
+        } else if (isCritical)  {
+            return criticalBatteryColor
+        } else if (isLow) {
+            return lowBatteryColor
+        } else {
+            return normalColor
+        }
+    }
 
     RowLayout {
         id: rowLayout
@@ -40,7 +54,7 @@ Item {
         StyledText {
             Layout.alignment: Qt.AlignVCenter
             color: (isCharging) ? Appearance.batteryColor.charging : textColor
-            text: `${Math.round(percentage * 100)}`
+            text: `${Math.round(percentage * 100)}%`
         }
 
         CircularProgress {
@@ -48,8 +62,8 @@ Item {
             lineWidth: 2
             value: percentage
             size: 26
-            secondaryColor: (isLow && !isCharging) ? batteryLowBackground : Appearance.colors.colSecondaryContainer
-            primaryColor: (isLow && !isCharging) ? batteryLowOnBackground : Appearance.m3colors.m3onSecondaryContainer
+            primaryColor: colorBasedOnState(textColor, Appearance.batteryColor.charging, Appearance.batteryColor.full, Appearance.batteryColor.low, Appearance.batteryColor.critical)
+            secondaryColor: colorBasedOnState("#00000000", Appearance.batteryColor.chargingBg, Appearance.batteryColor.fullBg, Appearance.batteryColor.lowBg, Appearance.batteryColor.criticalBg)
             fill: (isLow && !isCharging)
 
             MaterialSymbol {
@@ -57,7 +71,7 @@ Item {
                 fill: 1
                 text: "battery_full"
                 iconSize: Appearance.font.pixelSize.normal
-                color: (isLow && !isCharging) ? batteryLowOnBackground : Appearance.m3colors.m3onSecondaryContainer
+                color:  colorBasedOnState(textColor, Appearance.batteryColor.charging, Appearance.batteryColor.full, Appearance.batteryColor.low, Appearance.batteryColor.critical)
             }
 
         }

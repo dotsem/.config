@@ -23,16 +23,20 @@ Singleton {
     property real contentTransparency: Config.options?.appearance.transparency ? (m3colors.darkmode ? 0.55 : 0.55) : 0
 
     batteryColor: QtObject {
-        property color charging: "#0066ff"
+        property color charging: "#0099ff"
+        property color chargingBg: "#0045ad"
         property color low: "#ffff00"
+        property color lowBg: "#8cdfdf06"
         property color critical: "#ff0000"
+        property color criticalBg: "#80971010"
         property color full: "#77ff00"
+        property color fullBg: "#33bb11"
         property color normalLight: "#ffeeee"
         property color normalDark: "#221100"
     }
 
     m3colors: QtObject {
-        property bool darkmode: false
+        property bool darkmode: true
         property bool transparent: false
         property color m3primary_paletteKeyColor: "#ff9900"
         property color m3secondary_paletteKeyColor: "#15ff00"
