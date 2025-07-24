@@ -7,6 +7,8 @@
 
 import "./components/common/"
 import "./components/taskbar/"
+import "./components/mediaControls/"
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -15,6 +17,14 @@ import Quickshell
 
 ShellRoot {
     property bool enableBar: true
+    property bool enableMediaControls: true
+    property bool enableReloadPopup: true
+
+
 
     LazyLoader { active: enableBar; component: Bar {}}
+    LazyLoader { active: enableMediaControls; component: MediaControls {} }
+    LazyLoader { active: enableReloadPopup; component: ReloadPopup {} }
+
+
 }

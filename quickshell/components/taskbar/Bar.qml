@@ -97,6 +97,8 @@ Scope {
                             target: barBackground
                         }
                     }
+
+                    
                     // Background
                     Rectangle {
                         id: barBackground
@@ -236,13 +238,12 @@ Scope {
                                 //     }
                                 // }
                                 }
-                                 BarGroup {
                         
                                  Media {
                                     Layout.preferredWidth: 250
                                     visible: barRoot.useShortenedForm < 2
                                 }
-                                 }
+                                 
                             }
                         }
                     }

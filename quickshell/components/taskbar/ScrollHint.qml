@@ -23,10 +23,10 @@ Revealer { // Scroll hint
         onExited: hovered = false
         acceptedButtons: Qt.NoButton
 
-        // StyledToolTip {
-        //     extraVisibleCondition: tooltipText.length > 0
-        //     content: tooltipText
-        // }
+        StyledToolTip {
+            extraVisibleCondition: tooltipText.length > 0
+            content: tooltipText
+        }
 
         ColumnLayout {
             id: contentColumnLayout

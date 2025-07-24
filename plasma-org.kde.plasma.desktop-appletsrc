@@ -586,14 +586,14 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][349][Applets][361][Configuration]
-PreloadWeight=23
+PreloadWeight=15
 
 [Containments][349][Applets][362]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][349][Applets][362][Configuration]
-PreloadWeight=38
+PreloadWeight=30
 
 [Containments][349][Applets][362][Configuration][General]
 showPercentage=true
@@ -883,4 +883,4 @@ positions={"640x360":[]}
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/code.desktop,0,c66bcc86-9280-4271-8b2f-dfad04f16dcc,desktop:/steam.desktop,0,c66bcc86-9280-4271-8b2f-dfad04f16dcc
+screenMapping=desktop:/steam.desktop,0,c66bcc86-9280-4271-8b2f-dfad04f16dcc,desktop:/swappy-20250716_215108.png,0,c66bcc86-9280-4271-8b2f-dfad04f16dcc,desktop:/code.desktop,0,c66bcc86-9280-4271-8b2f-dfad04f16dcc,desktop:/swappy-20250716_215105.png,0,c66bcc86-9280-4271-8b2f-dfad04f16dcc
