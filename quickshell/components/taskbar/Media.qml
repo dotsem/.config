@@ -25,6 +25,7 @@ Item {
     property string artFilePath: `${artDownloadLocation}/${artFileName}`
     property color artDominantColor: ColorUtils.mix((colorQuantizer?.colors[0] ?? Appearance.colors.colPrimary), Appearance.colors.colPrimaryContainer, 0.8) || Appearance.m3colors.m3secondaryContainer
     property bool downloaded: false
+    property bool artRegistered: false
     property list<real> visualizerPoints: []
     property real maxVisualizerValue: 1000 // Max value in the data points
     property int visualizerSmoothing: 2 // Number of points to average for smoothing
@@ -60,7 +61,13 @@ Item {
         running: activePlayer?.playbackState == MprisPlaybackState.Playing
         interval: 1000
         repeat: true
-        onTriggered: activePlayer.positionChanged()
+        onTriggered: {
+            activePlayer.positionChanged();
+
+            if (media.downloaded == false) {
+                coverArtDownloader.running = true;
+            }
+        }
     }
 
     onArtUrlChanged: {
@@ -74,12 +81,34 @@ Item {
         coverArtDownloader.running = true;
     }
 
-    Process { // Cover art downloader
+    Process {
         id: coverArtDownloader
         property string targetFile: media.artUrl
-        command: ["bash", "-c", `[ -f ${artFilePath} ] || curl -sSL '${targetFile}' -o '${artFilePath}'`]
+        command: ["bash", "-c", `[ -f '${media.artFilePath}' ] || curl -sSL '${targetFile}' -o '${media.artFilePath}'`]
         onExited: (exitCode, exitStatus) => {
-            media.downloaded = true;
+            if (exitCode === 0 && exitStatus === 0) {
+                fileCheckerProcess.running = true; // start the file check
+            } else {
+                console.log("Download failed, retrying...");
+                Qt.callLater(() => coverArtDownloader.running = true);
+            }
+        }
+    }
+
+    Process {
+        id: fileCheckerProcess
+        property string filePath: media.artFilePath
+        command: ["bash", "-c", `[ -f '${filePath}' ] && echo exists || echo missing`]
+        stdout: StdioCollector {
+            onStreamFinished: () => {
+                var output = this.text;
+                if (output.indexOf("exists") !== -1) {
+                    media.downloaded = true;
+                } else {
+                    console.log("Art file missing, retrying download...");
+                    Qt.callLater(() => coverArtDownloader.running = true);
+                }
+            }
         }
     }
 
