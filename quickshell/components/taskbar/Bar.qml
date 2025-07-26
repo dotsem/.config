@@ -326,7 +326,7 @@ Scope {
                         WheelHandler {
                             onWheel: event => {
                                 const currentVolume = Audio.value;
-                                const step = currentVolume < 0.1 ? 0.01 : 0.02 || 0.2;
+                                const step = 0.01;
                                 if (event.angleDelta.y < 0)
                                     Audio.sink.audio.volume -= step;
                                 else if (event.angleDelta.y > 0)

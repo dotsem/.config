@@ -12,7 +12,6 @@
 // import "./modules/dock/"
 // import "./modules/mediaControls/"
 // import "./modules/notificationPopup/"
-// import "./modules/onScreenDisplay/"
 // import "./modules/onScreenKeyboard/"
 // import "./modules/overview/"
 // import "./modules/screenCorners/"

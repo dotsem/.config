@@ -289,10 +289,10 @@ Item {
                                 id: visualizerCanvas
                                 anchors.fill: parent
                                 live: activePlayer?.isPlaying
-                                points: activePlayer.visualizerPoints
-                                maxVisualizerValue: activePlayer.maxVisualizerValue
-                                smoothing: activePlayer.visualizerSmoothing
-                                color: blendedColors.colPrimary
+                                points: activePlayer?.visualizerPoints
+                                maxVisualizerValue: activePlayer?.maxVisualizerValue
+                                smoothing: activePlayer?.visualizerSmoothing
+                                color: blendedColors?.colPrimary
                             }
                         }
                     }

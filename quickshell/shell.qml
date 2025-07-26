@@ -8,6 +8,8 @@
 import "./components/common/"
 import "./components/taskbar/"
 import "./components/mediaControls/"
+import "./components/onScreenDisplay/"
+
 
 import QtQuick
 import QtQuick.Controls
@@ -19,12 +21,15 @@ ShellRoot {
     property bool enableBar: true
     property bool enableMediaControls: true
     property bool enableReloadPopup: true
+    property bool enableOnScreenDisplayBrightness: true
+    property bool enableOnScreenDisplayVolume: true
 
 
 
     LazyLoader { active: enableBar; component: Bar {}}
     LazyLoader { active: enableMediaControls; component: MediaControls {} }
     LazyLoader { active: enableReloadPopup; component: ReloadPopup {} }
-
+    LazyLoader { active: enableOnScreenDisplayBrightness; component: OnScreenDisplayBrightness {} }
+    LazyLoader { active: enableOnScreenDisplayVolume; component: OnScreenDisplayVolume {} }
 
 }
