@@ -28,6 +28,7 @@ Item {
     property list<real> visualizerPoints: []
     property real maxVisualizerValue: 1000 // Max value in the data points
     property int visualizerSmoothing: 2 // Number of points to average for smoothing
+    property bool hovered: false
 
     Layout.fillHeight: true
     implicitWidth: rowLayout.implicitWidth + rowLayout.spacing * 2
@@ -82,19 +83,24 @@ Item {
         }
     }
 
+    function anyChildHovered() {
+        for (let i = 0; i < trackControls.children.length; ++i) {
+            const child = trackControls.children[i];
+            if (child.hovered === true)
+                return true;
+        }
+        return false;
+    }
+
     MouseArea {
+        id: mediaArea
         anchors.fill: parent
-        acceptedButtons: Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton | Qt.RightButton | Qt.LeftButton
-        onPressed: event => {
-            if (event.button === Qt.MiddleButton) {
-                activePlayer.togglePlaying();
-            } else if (event.button === Qt.BackButton) {
-                activePlayer.previous();
-            } else if (event.button === Qt.ForwardButton || event.button === Qt.RightButton) {
-                activePlayer.next();
-            } else if (event.button === Qt.LeftButton) {
-                Hyprland.dispatch("global quickshell:mediaControlsToggle");
-            }
+        hoverEnabled: true
+
+        onEntered: media.hovered = true
+        onExited: {
+            if (media.anyChildHovered() === false)
+                media.hovered = false;
         }
     }
 
@@ -164,19 +170,9 @@ Item {
 
             Rectangle {
                 anchors.fill: parent
-                color: ColorUtils.transparentize(blendedColors.colLayer0, 0.25)
+                color: ColorUtils.transparentize(blendedColors.colLayer0, 1)
                 radius: root.popupRounding
             }
-        }
-
-         WaveVisualizer {
-            id: visualizerCanvas
-            anchors.fill: parent
-            live: activePlayer?.isPlaying
-            points: activePlayer.visualizerPoints
-            maxVisualizerValue: activePlayer.maxVisualizerValue
-            smoothing: activePlayer.visualizerSmoothing
-            color: blendedColors.colPrimary
         }
 
         RowLayout {
@@ -189,7 +185,7 @@ Item {
                 Layout.fillHeight: true
                 implicitWidth: height
                 radius: 8
-                color: ColorUtils.transparentize(blendedColors.colLayer1, 0.5)
+                color: ColorUtils.transparentize(blendedColors.colLayer1, 1)
 
                 layer.enabled: true
                 layer.effect: OpacityMask {
@@ -217,59 +213,129 @@ Item {
                     sourceSize.height: size
                 }
             }
-            ColumnLayout {
-                id: content
-                Layout.fillHeight: true
+            Item {
                 Layout.fillWidth: true
-                Layout.rightMargin: 16
+                Layout.fillHeight: true
 
-                StyledText {
-                    visible: Config.options.bar.verbose
-                    width: rowLayout.width - (CircularProgress.size + rowLayout.spacing * 2)
-                    Layout.alignment: Qt.AlignVCenter
-                    Layout.fillWidth: true // Ensures the text takes up available space
-                    Layout.rightMargin: rowLayout.spacing
-                    horizontalAlignment: Text.AlignHCenter
-                    elide: Text.ElideRight // Truncates the text on the right
-                    color: Appearance.colors.colOnLayer1
-                    text: `${cleanedTitle}${activePlayer?.trackArtist ? ' • ' + activePlayer.trackArtist : ''}`
-                }
-                Item {
-                    id: progressBarContainer
-                    Layout.fillWidth: true
-                    implicitHeight: progressBar.implicitHeight
+                Revealer {
+                    id: defaultView
+                    vertical: true
+                    reveal: !media.hovered
 
-                    StyledProgressBar {
-                        id: progressBar
-                        anchors.fill: parent
-                        highlightColor: blendedColors.colPrimary
-                        trackColor: blendedColors.colSecondaryContainer
-                        value: activePlayer?.position / activePlayer?.length
-                        sperm: activePlayer?.isPlaying
+                    ColumnLayout {
+                        id: content
+                        z: 1
+                        Layout.fillHeight: true
+                        Layout.fillWidth: true
+                        width: 180
+
+                        Layout.rightMargin: 16
+
+                        StyledText {
+                            visible: Config.options.bar.verbose
+                            width: rowLayout.width - (CircularProgress.size + rowLayout.spacing * 2)
+                            Layout.alignment: Qt.AlignVCenter
+                            Layout.fillWidth: true // Ensures the text takes up available space
+                            Layout.rightMargin: rowLayout.spacing
+                            horizontalAlignment: Text.AlignHCenter
+                            elide: Text.ElideRight // Truncates the text on the right
+                            color: Appearance.colors.colOnLayer1
+                            text: `${cleanedTitle}${activePlayer?.trackArtist ? ' • ' + activePlayer.trackArtist : ''}`
+                        }
+                        Item {
+                            id: progressBarContainer
+                            Layout.fillWidth: true
+                            implicitHeight: progressBar.implicitHeight
+
+                            StyledProgressBar {
+                                id: progressBar
+                                anchors.fill: parent
+                                highlightColor: blendedColors.colPrimary
+                                trackColor: blendedColors.colSecondaryContainer
+                                value: activePlayer?.position / activePlayer?.length
+                                sperm: activePlayer?.isPlaying
+                            }
+
+                            WaveVisualizer {
+                                id: visualizerCanvas
+                                anchors.fill: parent
+                                live: activePlayer?.isPlaying
+                                points: activePlayer.visualizerPoints
+                                maxVisualizerValue: activePlayer.maxVisualizerValue
+                                smoothing: activePlayer.visualizerSmoothing
+                                color: blendedColors.colPrimary
+                            }
+                        }
                     }
                 }
             }
-            // Revealer {
-            //     id: audioControls
-            //     Layout.fillWidth: true
-            //     reveal: true
 
-            //     RowLayout {
+            Item {
+                id: mediaButtons
+                anchors.right: parent.right
+                // anchors {
+                //     bottom: parent.bottom
+                //     left: parent.left
+                //     right: parent.right
+                // }
+                width: 180
 
-            //         TrackChangeButton {
-            //             iconName: "skip_previous"
-            //             onClicked: playerController.player?.previous()
-            //         }
-            //
-            //         TrackChangeButton {
-            //             iconName: "skip_next"
-            //             onClicked: playerController.player?.next()
-            //         }
-            //     }
-            // }
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                Revealer {
+                    id: audioControls
+                    Layout.fillWidth: true
+                    reveal: media.hovered
+                    vertical: true
+
+                    RowLayout {
+                        id: trackControls
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+
+                        TrackChangeButton {
+                            iconName: "skip_previous"
+                            onClicked: activePlayer?.previous()
+                        }
+
+                        RippleButton {
+                            id: playPauseButton
+                            anchors.right: parent.center
+                            anchors.bottom: mediaButtons.top
+                            anchors.bottomMargin: 5
+                            property real size: 22
+                            implicitWidth: size
+                            implicitHeight: size
+                            onClicked: activePlayer.togglePlaying()
+
+                            buttonRadius: activePlayer?.isPlaying ? Appearance?.rounding.normal : size / 2
+                            colBackground: activePlayer?.isPlaying ? blendedColors.colPrimary : blendedColors.colSecondaryContainer
+                            colBackgroundHover: activePlayer?.isPlaying ? blendedColors.colPrimaryHover : blendedColors.colSecondaryContainerHover
+                            colRipple: activePlayer?.isPlaying ? blendedColors.colPrimaryActive : blendedColors.colSecondaryContainerActive
+
+                            contentItem: MaterialSymbol {
+                                iconSize: Appearance.font.pixelSize.huge
+                                fill: 1
+                                horizontalAlignment: Text.AlignHCenter
+                                color: activePlayer?.isPlaying ? blendedColors.colOnPrimary : blendedColors.colOnSecondaryContainer
+                                text: activePlayer?.isPlaying ? "pause" : "play_arrow"
+
+                                Behavior on color {
+                                    animation: Appearance.animation.elementMoveFast.colorAnimation.createObject(this)
+                                }
+                            }
+                        }
+
+                        TrackChangeButton {
+                            iconName: "skip_next"
+                            onClicked: activePlayer?.next()
+                        }
+                    }
+                }
+            }
         }
     }
-
     // RowLayout { // Real content
     //     id: rowLayout
 
