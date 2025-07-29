@@ -1,10 +1,11 @@
-import "root:/modules/common"
-import "root:/modules/common/widgets"
+import "root:/components/common"
+import "root:/components/common/widgets"
 import "root:/services"
 import "./calendar"
 import "./notifications"
 import "./todo"
 import "./volumeMixer"
+import "./bluetoothManager"
 import Qt5Compat.GraphicalEffects
 import QtQuick
 import QtQuick.Controls
@@ -17,7 +18,7 @@ Rectangle {
     color: Appearance.colors.colLayer1
 
     property int selectedTab: 0
-    property var tabButtonList: [{"icon": "notifications", "name": qsTr("Notifications")}, {"icon": "volume_up", "name": qsTr("Volume mixer")}]
+    property var tabButtonList: [{"icon": "notifications", "name": qsTr("Notifications")}, {"icon": "volume_up", "name": qsTr("Volume mixer")}, {"icon": "bluetooth", "name": qsTr("Bluetooth")}]
 
     Keys.onPressed: (event) => {
         if (event.key === Qt.Key_PageDown || event.key === Qt.Key_PageUp) {
@@ -77,6 +78,7 @@ Rectangle {
 
             NotificationList {}
             VolumeMixer {}
+            BluetoothManager {}
         }
     }
 }

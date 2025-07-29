@@ -9,6 +9,8 @@ import "./components/common/"
 import "./components/taskbar/"
 import "./components/mediaControls/"
 import "./components/onScreenDisplay/"
+import "./components/sidebarRight/"
+
 
 
 import QtQuick
@@ -23,6 +25,7 @@ ShellRoot {
     property bool enableReloadPopup: true
     property bool enableOnScreenDisplayBrightness: true
     property bool enableOnScreenDisplayVolume: true
+    property bool enableSidebarRight: true
 
 
 
@@ -31,5 +34,6 @@ ShellRoot {
     LazyLoader { active: enableReloadPopup; component: ReloadPopup {} }
     LazyLoader { active: enableOnScreenDisplayBrightness; component: OnScreenDisplayBrightness {} }
     LazyLoader { active: enableOnScreenDisplayVolume; component: OnScreenDisplayVolume {} }
+    LazyLoader { active: enableSidebarRight; component: SidebarRight {} }
 
 }

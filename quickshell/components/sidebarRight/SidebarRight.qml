@@ -1,9 +1,9 @@
 import "root:/"
 import "root:/services"
-import "root:/modules/common"
-import "root:/modules/common/widgets"
-import "root:/modules/common/functions/string_utils.js" as StringUtils
-import "root:/modules/common/functions/file_utils.js" as FileUtils
+import "root:/components/common"
+import "root:/components/common/widgets"
+import "root:/components/common/functions/string_utils.js" as StringUtils
+import "root:/components/common/functions/file_utils.js" as FileUtils
 import "./quickToggles/"
 import QtQuick
 import QtQuick.Controls
@@ -132,55 +132,42 @@ Scope {
                                 Layout.fillWidth: true
                             }
 
-                            ButtonGroup {
-                                QuickToggleButton {
-                                    toggled: false
-                                    buttonIcon: "restart_alt"
-                                    onClicked: {
-                                        Hyprland.dispatch("reload")
-                                        Quickshell.reload(true)
-                                    }
-                                    StyledToolTip {
-                                        content: qsTr("Reload Hyprland & Quickshell")
-                                    }
-                                }
-                                QuickToggleButton {
-                                    toggled: false
-                                    buttonIcon: "settings"
-                                    onClicked: {
-                                        Hyprland.dispatch("global quickshell:sidebarRightClose")
-                                        Quickshell.execDetached(["qs", "-p", root.settingsQmlPath])
-                                    }
-                                    StyledToolTip {
-                                        content: qsTr("Settings")
-                                    }
-                                }
-                                QuickToggleButton {
-                                    toggled: false
-                                    buttonIcon: "power_settings_new"
-                                    onClicked: {
-                                        Hyprland.dispatch("global quickshell:sessionOpen")
-                                    }
-                                    StyledToolTip {
-                                        content: qsTr("Session")
-                                    }
-                                }
-                            }
+                            // ButtonGroup {
+                            //     QuickToggleButton {
+                            //         toggled: false
+                            //         buttonIcon: "restart_alt"
+                            //         onClicked: {
+                            //             Hyprland.dispatch("reload")
+                            //             Quickshell.reload(true)
+                            //         }
+                            //         StyledToolTip {
+                            //             content: qsTr("Reload Hyprland & Quickshell")
+                            //         }
+                            //     }
+                            //     QuickToggleButton {
+                            //         toggled: false
+                            //         buttonIcon: "settings"
+                            //         onClicked: {
+                            //             Hyprland.dispatch("global quickshell:sidebarRightClose")
+                            //             Quickshell.execDetached(["qs", "-p", root.settingsQmlPath])
+                            //         }
+                            //         StyledToolTip {
+                            //             content: qsTr("Settings")
+                            //         }
+                            //     }
+                            //     QuickToggleButton {
+                            //         toggled: false
+                            //         buttonIcon: "power_settings_new"
+                            //         onClicked: {
+                            //             Hyprland.dispatch("global quickshell:sessionOpen")
+                            //         }
+                            //         StyledToolTip {
+                            //             content: qsTr("Session")
+                            //         }
+                            //     }
+                            // }
                         }
 
-                        ButtonGroup {
-                            Layout.alignment: Qt.AlignHCenter
-                            spacing: 5
-                            padding: 5
-                            color: Appearance.colors.colLayer1
-
-                            NetworkToggle {}
-                            BluetoothToggle {}
-                            NightLight {}
-                            GameMode {}
-                            IdleInhibitor {}
-                            CloudflareWarp {}
-                        }
 
                         // Center widget group
                         CenterWidgetGroup {

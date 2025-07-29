@@ -327,9 +327,9 @@ Scope {
                             onWheel: event => {
                                 const currentVolume = Audio.value;
                                 const step = 0.01;
-                                if (event.angleDelta.y < 0)
+                                if (event.angleDelta.y > 0)
                                     Audio.sink.audio.volume -= step;
-                                else if (event.angleDelta.y > 0)
+                                else if (event.angleDelta.y < 0)
                                     Audio.sink.audio.volume = Math.min(1, Audio.sink.audio.volume + step);
                                 // Store the mouse position and start tracking
                                 barRightSideMouseArea.lastScrollX = event.x;
