@@ -55,6 +55,7 @@ glib-2.0/
 go/
 goa-1.0/
 libaccounts-glib/
+gh/
 
 # Plasma/KDE transient or machine-bound
 KDE/

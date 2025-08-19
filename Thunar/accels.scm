@@ -14,6 +14,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/new-window" "<Primary>n")
 ; (gtk_accel_path "<Actions>/ThunarWindow/clear-directory-specific-settings" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/close-window" "<Primary>q")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/4a56a41bb4c689fff31dcc3a2fc700ad" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-parent" "<Alt>Up")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-menu" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/switch-previous-tab" "<Primary>Page_Up")
