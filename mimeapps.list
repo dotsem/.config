@@ -1,7 +1,7 @@
 [Added Associations]
 application/x-roblox-rbxl=roblox-studio.desktop;
 application/x-roblox-rbxlx=roblox-studio.desktop;
-image/jpeg=org.kde.gwenview.desktop;feh.desktop;gwenview-2.desktop;gwenview.desktop;
+image/jpeg=com.google.Chrome.desktop;org.kde.gwenview.desktop;feh.desktop;gwenview-2.desktop;gwenview.desktop;
 x-scheme-handler/http=google-chrome.desktop;
 x-scheme-handler/https=google-chrome.desktop;
 x-scheme-handler/msteams=teams.desktop;

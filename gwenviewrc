@@ -1,8 +1,8 @@
 [Crop]
 CropAdvancedSettingsEnabled=true
-CropRatioHeight=1
-CropRatioIndex=1
-CropRatioWidth=1
+CropRatioHeight=9
+CropRatioIndex=5
+CropRatioWidth=16
 
 [General]
 LastUsedVersion=210800
@@ -15,26 +15,26 @@ ThumbnailSplitterSizes=715,204
 MenuBar=Disabled
 
 [Recent Files]
-File1[$e]=$HOME/Pictures/camera/ittemp/DSC_0004.JPG
-File10[$e]=$HOME/.config/hypr/background-changer/img/9.jpg
-File2[$e]=$HOME/Downloads/20250516_165430.jpg
-File3[$e]=$HOME/.cache/quickshell/media/coverart/d5bd8b67b95db1ba434185555933fb0d.jpg
-File4[$e]=$HOME/.config/hypr/background-changer/img/0.jpg
-File5[$e]=$HOME/.config/hypr/background-changer/img/2.jpg
-File6[$e]=$HOME/.config/hypr/background-changer/img/4.jpg
-File7[$e]=$HOME/.config/hypr/background-changer/img/5.jpg
-File8[$e]=$HOME/.config/hypr/background-changer/img/6.png
-File9[$e]=$HOME/.config/hypr/background-changer/img/8.jpg
-Name1[$e]=DSC_0004.JPG
-Name10[$e]=9.jpg
-Name2[$e]=20250516_165430.jpg
-Name3[$e]=d5bd8b67b95db1ba434185555933fb0d.jpg
-Name4[$e]=0.jpg
-Name5[$e]=2.jpg
-Name6[$e]=4.jpg
-Name7[$e]=5.jpg
-Name8[$e]=6.png
-Name9[$e]=8.jpg
+File1[$e]=$HOME/.config/hypr/background-changer/img/0.jpg
+File10[$e]=$HOME/.config/hypr/background-changer/img/6.jpg
+File2[$e]=$HOME/.config/hypr/background-changer/img/2.jpg
+File3[$e]=$HOME/.config/hypr/background-changer/img/4.jpg
+File4[$e]=$HOME/.config/hypr/background-changer/img/5.jpg
+File5[$e]=$HOME/.config/hypr/background-changer/img/6.png
+File6[$e]=$HOME/.config/hypr/background-changer/img/8.jpg
+File7[$e]=$HOME/.config/hypr/background-changer/img/9.jpg
+File8[$e]=$HOME/Pictures/img/5.jpg
+File9[$e]=$HOME/Pictures/img/6.jpg
+Name1[$e]=0.jpg
+Name10[$e]=6.jpg
+Name2[$e]=2.jpg
+Name3[$e]=4.jpg
+Name4[$e]=5.jpg
+Name5[$e]=6.png
+Name6[$e]=8.jpg
+Name7[$e]=9.jpg
+Name8[$e]=5.jpg
+Name9[$e]=6.jpg
 
 [SideBar]
 InformationSplitterSizes=220,255
