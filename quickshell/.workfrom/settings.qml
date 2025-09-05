@@ -14,11 +14,11 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Hyprland
 import "root:/services/"
-import "root:/modules/common/"
-import "root:/modules/common/widgets/"
-import "root:/modules/common/functions/color_utils.js" as ColorUtils
-import "root:/modules/common/functions/file_utils.js" as FileUtils
-import "root:/modules/common/functions/string_utils.js" as StringUtils
+import "root:/components/common/"
+import "root:/components/common/widgets/"
+import "root:/components/common/functions/color_utils.js" as ColorUtils
+import "root:/components/common/functions/file_utils.js" as FileUtils
+import "root:/components/common/functions/string_utils.js" as StringUtils
 
 ApplicationWindow {
     id: root
@@ -30,27 +30,27 @@ ApplicationWindow {
         {
             name: "Style",
             icon: "palette",
-            component: "modules/settings/StyleConfig.qml"
+            component: "components/settings/StyleConfig.qml"
         },
         {
             name: "Interface",
             icon: "cards",
-            component: "modules/settings/InterfaceConfig.qml"
+            component: "components/settings/InterfaceConfig.qml"
         },
         {
             name: "Services",
             icon: "settings",
-            component: "modules/settings/ServicesConfig.qml"
+            component: "components/settings/ServicesConfig.qml"
         },
         {
             name: "Advanced",
             icon: "construction",
-            component: "modules/settings/AdvancedConfig.qml"
+            component: "components/settings/AdvancedConfig.qml"
         },
         {
             name: "About",
             icon: "info",
-            component: "modules/settings/About.qml"
+            component: "components/settings/About.qml"
         }
     ]
     property int currentPage: 0

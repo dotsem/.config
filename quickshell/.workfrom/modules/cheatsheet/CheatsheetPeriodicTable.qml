@@ -1,8 +1,8 @@
 import "root:/"
 import "root:/services"
-import "root:/modules/common"
-import "root:/modules/common/widgets"
-import "root:/modules/common/functions/file_utils.js" as FileUtils
+import "root:/components/common"
+import "root:/components/common/widgets"
+import "root:/components/common/functions/file_utils.js" as FileUtils
 import "periodic_table.js" as PTable
 import QtQuick
 import QtQuick.Controls

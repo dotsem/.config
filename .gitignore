@@ -15,7 +15,6 @@ kactivitymanagerdrc
 kactivitymanagerd-statsrc
 manjaro*
 procps/
-systemd/
 evolution/
 
 # Proprietary apps
@@ -79,6 +78,11 @@ ktimezonedrc
 # Other backups or temp files
 *.bak
 *~
+rclone.conf
+
+obsidian/
+logs/
+log/
 
 # fuck eww
 eww/

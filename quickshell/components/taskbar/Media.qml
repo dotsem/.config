@@ -1,3 +1,4 @@
+pragma ComponentBehavior: Bound
 import "root:/components/common"
 import "root:/components/common/widgets"
 import "root:/services"
@@ -58,11 +59,11 @@ Item {
     }
 
     Timer {
-        running: activePlayer?.playbackState == MprisPlaybackState.Playing
+        running: media.activePlayer?.playbackState == MprisPlaybackState.Playing
         interval: 1000
         repeat: true
         onTriggered: {
-            activePlayer.positionChanged();
+            media.activePlayer.positionChanged();
 
             if (media.downloaded == false) {
                 coverArtDownloader.running = true;
@@ -248,7 +249,7 @@ Item {
 
                 Revealer {
                     id: defaultView
-                    vertical: true
+                    vertical: false
                     reveal: !media.hovered
 
                     ColumnLayout {

@@ -1,7 +1,7 @@
 import "root:/"
 import "root:/services"
-import "root:/modules/common"
-import "root:/modules/common/widgets"
+import "root:/components/common"
+import "root:/components/common/widgets"
 import "layouts.js" as Layouts
 import QtQuick
 import QtQuick.Controls

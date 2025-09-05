@@ -1,0 +1,13 @@
+[Unit]
+Description=Rclone bisync with Google Drive
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone bisync %h/drive drive: --verbose
+ExecStop=/usr/bin/rclone bisync %h/drive drive: --verbose
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

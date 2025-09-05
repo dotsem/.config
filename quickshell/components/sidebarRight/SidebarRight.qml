@@ -20,7 +20,7 @@ Scope {
     id: root
     property int sidebarWidth: Appearance.sizes.sidebarWidth
     property int sidebarPadding: 15
-    property string settingsQmlPath: Quickshell.configPath("settings.qml")
+    property string settingsQmlPath: Quickshell.shellPath("settings.qml")
 
     PanelWindow {
         id: sidebarRoot
@@ -127,45 +127,44 @@ Scope {
                                 text: StringUtils.format(qsTr("Uptime: {0}"), DateTime.uptime)
                                 textFormat: Text.MarkdownText
                             }
-
                             Item {
                                 Layout.fillWidth: true
                             }
 
-                            // ButtonGroup {
-                            //     QuickToggleButton {
-                            //         toggled: false
-                            //         buttonIcon: "restart_alt"
-                            //         onClicked: {
-                            //             Hyprland.dispatch("reload")
-                            //             Quickshell.reload(true)
-                            //         }
-                            //         StyledToolTip {
-                            //             content: qsTr("Reload Hyprland & Quickshell")
-                            //         }
-                            //     }
-                            //     QuickToggleButton {
-                            //         toggled: false
-                            //         buttonIcon: "settings"
-                            //         onClicked: {
-                            //             Hyprland.dispatch("global quickshell:sidebarRightClose")
-                            //             Quickshell.execDetached(["qs", "-p", root.settingsQmlPath])
-                            //         }
-                            //         StyledToolTip {
-                            //             content: qsTr("Settings")
-                            //         }
-                            //     }
-                            //     QuickToggleButton {
-                            //         toggled: false
-                            //         buttonIcon: "power_settings_new"
-                            //         onClicked: {
-                            //             Hyprland.dispatch("global quickshell:sessionOpen")
-                            //         }
-                            //         StyledToolTip {
-                            //             content: qsTr("Session")
-                            //         }
-                            //     }
-                            // }
+                            ButtonGroup {
+                                QuickToggleButton {
+                                    toggled: false
+                                    buttonIcon: "restart_alt"
+                                    onClicked: {
+                                        Hyprland.dispatch("reload")
+                                        Quickshell.reload(true)
+                                    }
+                                    StyledToolTip {
+                                        content: qsTr("Reload Hyprland & Quickshell")
+                                    }
+                                }
+                                QuickToggleButton {
+                                    toggled: false
+                                    buttonIcon: "settings"
+                                    onClicked: {
+                                        Hyprland.dispatch("global quickshell:sidebarRightClose")
+                                        Quickshell.execDetached(["qs", "-p", root.settingsQmlPath])
+                                    }
+                                    StyledToolTip {
+                                        content: qsTr("Settings")
+                                    }
+                                }
+                                QuickToggleButton {
+                                    toggled: false
+                                    buttonIcon: "power_settings_new"
+                                    onClicked: {
+                                        Hyprland.dispatch("global quickshell:sessionOpen")
+                                    }
+                                    StyledToolTip {
+                                        content: qsTr("Session")
+                                    }
+                                }
+                            }
                         }
 
 

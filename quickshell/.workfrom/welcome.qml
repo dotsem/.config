@@ -13,11 +13,11 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Hyprland
 import "root:/services/"
-import "root:/modules/common/"
-import "root:/modules/common/widgets/"
-import "root:/modules/common/functions/color_utils.js" as ColorUtils
-import "root:/modules/common/functions/file_utils.js" as FileUtils
-import "root:/modules/common/functions/string_utils.js" as StringUtils
+import "root:/components/common/"
+import "root:/components/common/widgets/"
+import "root:/components/common/functions/color_utils.js" as ColorUtils
+import "root:/components/common/functions/file_utils.js" as FileUtils
+import "root:/components/common/functions/string_utils.js" as StringUtils
 
 ApplicationWindow {
     id: root
@@ -42,7 +42,7 @@ ApplicationWindow {
     Process {
         id: konachanWallProc
         property string status: ""
-        command: ["bash", "-c", Quickshell.configPath("scripts/colors/random_konachan_wall.sh")]
+        command: ["bash", "-c", Quickshell.shellPath("scripts/colors/random_konachan_wall.sh")]
         stdout: SplitParser {
             onRead: data => {
                 console.log(`Konachan wall proc output: ${data}`);

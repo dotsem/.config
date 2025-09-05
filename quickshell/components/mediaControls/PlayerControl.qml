@@ -54,32 +54,33 @@ Item { // Player instance
         }
     }
 
-    Timer { // Force update for prevision
+    Timer {
+        // Force update for prevision
         running: playerController.player?.playbackState == MprisPlaybackState.Playing
         interval: 1000
         repeat: true
         onTriggered: {
-            playerController.player.positionChanged()
+            playerController.player.positionChanged();
         }
     }
 
     onArtUrlChanged: {
         if (playerController.artUrl.length == 0) {
-            playerController.artDominantColor = Appearance.m3colors.m3secondaryContainer
+            playerController.artDominantColor = Appearance.m3colors.m3secondaryContainer;
             return;
         }
         // console.log("PlayerControl: Art URL changed to", playerController.artUrl)
         // console.log("Download cmd:", coverArtDownloader.command.join(" "))
-        playerController.downloaded = false
-        coverArtDownloader.running = true
+        playerController.downloaded = false;
+        coverArtDownloader.running = true;
     }
 
     Process { // Cover art downloader
         id: coverArtDownloader
         property string targetFile: playerController.artUrl
-        command: [ "bash", "-c", `[ -f ${artFilePath} ] || curl -sSL '${targetFile}' -o '${artFilePath}'` ]
+        command: ["bash", "-c", `[ -f ${artFilePath} ] || curl -sSL '${targetFile}' -o '${artFilePath}'`]
         onExited: (exitCode, exitStatus) => {
-            playerController.downloaded = true
+            playerController.downloaded = true;
         }
     }
 
@@ -105,7 +106,6 @@ Item { // Player instance
         property color colSecondaryContainerActive: ColorUtils.mix(Appearance.colors.colSecondaryContainerActive, artDominantColor, 0.5)
         property color colOnPrimary: ColorUtils.mix(ColorUtils.adaptToAccent(Appearance.m3colors.m3onPrimary, artDominantColor), artDominantColor, 0.5)
         property color colOnSecondaryContainer: ColorUtils.mix(Appearance.m3colors.m3onSecondaryContainer, artDominantColor, 0.5)
-
     }
 
     StyledRectangularShadow {
@@ -203,7 +203,8 @@ Item { // Player instance
                 }
             }
 
-            ColumnLayout { // Info & controls
+            ColumnLayout {
+                // Info & controls
                 Layout.fillHeight: true
                 spacing: 2
 
@@ -223,7 +224,9 @@ Item { // Player instance
                     elide: Text.ElideRight
                     text: playerController.player?.trackArtist
                 }
-                Item { Layout.fillHeight: true }
+                Item {
+                    Layout.fillHeight: true
+                }
                 Item {
                     Layout.fillWidth: true
                     implicitHeight: trackTime.implicitHeight + sliderRow.implicitHeight
@@ -254,7 +257,7 @@ Item { // Player instance
                             Layout.fillWidth: true
                             implicitHeight: progressBar.implicitHeight
 
-                            StyledProgressBar { 
+                            StyledProgressBar {
                                 id: progressBar
                                 anchors.fill: parent
                                 highlightColor: blendedColors.colPrimary
@@ -277,7 +280,7 @@ Item { // Player instance
                         property real size: 44
                         implicitWidth: size
                         implicitHeight: size
-                        onClicked: playerController.player.togglePlaying();
+                        onClicked: playerController.player.togglePlaying()
 
                         buttonRadius: playerController.player?.isPlaying ? Appearance?.rounding.normal : size / 2
                         colBackground: playerController.player?.isPlaying ? blendedColors.colPrimary : blendedColors.colSecondaryContainer

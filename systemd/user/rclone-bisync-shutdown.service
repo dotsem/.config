@@ -1,0 +1,11 @@
+[Unit]
+Description=Final Rclone bisync before shutdown
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rclone bisync %h/drive drive: --verbose
+
+[Install]
+WantedBy=shutdown.target

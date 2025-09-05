@@ -3,7 +3,6 @@
 //@ pragma Env QT_QUICK_CONTROLS_STYLE=Basic
 
 // Adjust this to make the shell smaller or larger
-//@ pragma Env QT_SCALE_FACTOR=1
 
 import "./components/common/"
 import "./components/taskbar/"
@@ -20,6 +19,7 @@ import QtQuick.Window
 import Quickshell
 
 ShellRoot {
+    id: root
     property bool enableBar: true
     property bool enableMediaControls: true
     property bool enableReloadPopup: true
@@ -29,11 +29,11 @@ ShellRoot {
 
 
 
-    LazyLoader { active: enableBar; component: Bar {}}
-    LazyLoader { active: enableMediaControls; component: MediaControls {} }
-    LazyLoader { active: enableReloadPopup; component: ReloadPopup {} }
-    LazyLoader { active: enableOnScreenDisplayBrightness; component: OnScreenDisplayBrightness {} }
-    LazyLoader { active: enableOnScreenDisplayVolume; component: OnScreenDisplayVolume {} }
-    LazyLoader { active: enableSidebarRight; component: SidebarRight {} }
+    LazyLoader { active: root.enableBar; component: Bar {}}
+    LazyLoader { active: root.enableMediaControls; component: MediaControls {} }
+    LazyLoader { active: root.enableReloadPopup; component: ReloadPopup {} }
+    LazyLoader { active: root.enableOnScreenDisplayBrightness; component: OnScreenDisplayBrightness {} }
+    LazyLoader { active: root.enableOnScreenDisplayVolume; component: OnScreenDisplayVolume {} }
+    LazyLoader { active: root.enableSidebarRight; component: SidebarRight {} }
 
 }

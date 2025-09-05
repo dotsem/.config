@@ -1,11 +1,11 @@
 import "root:/"
 import "root:/services"
-import "root:/modules/common"
-import "root:/modules/common/widgets"
+import "root:/components/common"
+import "root:/components/common/widgets"
 import "./aiChat/"
-import "root:/modules/common/functions/fuzzysort.js" as Fuzzy
-import "root:/modules/common/functions/string_utils.js" as StringUtils
-import "root:/modules/common/functions/file_utils.js" as FileUtils
+import "root:/components/common/functions/fuzzysort.js" as Fuzzy
+import "root:/components/common/functions/string_utils.js" as StringUtils
+import "root:/components/common/functions/file_utils.js" as FileUtils
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -129,7 +129,7 @@ Mowe uwu wem ipsum!
 ### Formatting
 
 - *Italic*, \`Monospace\`, **Bold**, [Link](https://example.com)
-- Arch lincox icon <img src="${Quickshell.configPath("assets/icons/arch-symbolic.svg")}" height="${Appearance.font.pixelSize.small}"/>
+- Arch lincox icon <img src="${Quickshell.shellPath("assets/icons/arch-symbolic.svg")}" height="${Appearance.font.pixelSize.small}"/>
 
 ### Table
 

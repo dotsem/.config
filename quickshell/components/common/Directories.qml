@@ -16,8 +16,8 @@ Singleton {
     readonly property string downloads: StandardPaths.standardLocations(StandardPaths.DownloadLocation)[0]
     
     // Other dirs used by the shell, without "file://"
-    property string assetsPath: Quickshell.configPath("assets")
-    property string scriptPath: Quickshell.configPath("scripts")
+    property string assetsPath: Quickshell.shellPath("assets")
+    property string scriptPath: Quickshell.shellPath("scripts")
     property string favicons: FileUtils.trimFileProtocol(`${Directories.cache}/media/favicons`)
     property string coverArt: FileUtils.trimFileProtocol(`${Directories.cache}/media/coverart`)
     property string booruPreviews: FileUtils.trimFileProtocol(`${Directories.cache}/media/boorus`)
@@ -26,14 +26,14 @@ Singleton {
     property string latexOutput: FileUtils.trimFileProtocol(`${Directories.cache}/media/latex`)
     property string shellConfig: FileUtils.trimFileProtocol(`${Directories.config}/illogical-impulse`)
     property string shellConfigName: "config.json"
-    property string shellConfigPath: `${Directories.shellConfig}/${Directories.shellConfigName}`
+    property string shellshellPath: `${Directories.shellConfig}/${Directories.shellConfigName}`
     property string todoPath: FileUtils.trimFileProtocol(`${Directories.state}/user/todo.json`)
     property string notificationsPath: FileUtils.trimFileProtocol(`${Directories.cache}/notifications/notifications.json`)
     property string generatedMaterialThemePath: FileUtils.trimFileProtocol(`${Directories.state}/user/generated/colors.json`)
     property string cliphistDecode: FileUtils.trimFileProtocol(`/tmp/quickshell/media/cliphist`)
     property string screenshotTemp: "/tmp/quickshell/media/screenshot"
     property string wallpaperSwitchScriptPath: FileUtils.trimFileProtocol(`${Directories.scriptPath}/colors/switchwall.sh`)
-    property string defaultAiPrompts: Quickshell.configPath("defaults/ai/prompts")
+    property string defaultAiPrompts: Quickshell.shellPath("defaults/ai/prompts")
     property string userAiPrompts: FileUtils.trimFileProtocol(`${Directories.shellConfig}/ai/prompts`)
     property string aiChats: FileUtils.trimFileProtocol(`${Directories.state}/user/ai/chats`)
     // Cleanup on init

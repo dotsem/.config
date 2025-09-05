@@ -6,7 +6,7 @@ import Quickshell.Io
 
 Singleton {
     id: root
-    property string filePath: Directories.shellConfigPath
+    property string filePath: Directories.shellshellPath
     property alias options: configOptionsJsonAdapter
 
     function setNestedValue(nestedKey, value) {
@@ -98,7 +98,7 @@ Singleton {
                 property bool fixedClockPosition: false
                 property real clockX: -500
                 property real clockY: -500
-                property string wallpaperPath: Quickshell.configPath("assets/images/default_wallpaper.png")
+                property string wallpaperPath: Quickshell.shellPath("assets/images/default_wallpaper.png")
             }
 
             property JsonObject bar: JsonObject {

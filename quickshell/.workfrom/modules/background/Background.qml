@@ -1,10 +1,10 @@
 pragma ComponentBehavior: Bound
 
 import "root:/"
-import "root:/modules/common"
-import "root:/modules/common/widgets"
+import "root:/components/common"
+import "root:/components/common/widgets"
 import "root:/services"
-import "root:/modules/common/functions/color_utils.js" as ColorUtils
+import "root:/components/common/functions/color_utils.js" as ColorUtils
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -67,7 +67,7 @@ Scope {
                 property string path: bgRoot.wallpaperPath
                 property int contentWidth: bgRoot.screen.width
                 property int contentHeight: bgRoot.screen.height
-                command: [Quickshell.configPath("scripts/images/least_busy_region.py"),
+                command: [Quickshell.shellPath("scripts/images/least_busy_region.py"),
                     "--screen-width", bgRoot.screen.width,
                     "--screen-height", bgRoot.screen.height,
                     "--width", contentWidth,
