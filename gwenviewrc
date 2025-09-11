@@ -12,26 +12,26 @@ ThumbnailSplitterSizes=715,204
 MenuBar=Disabled
 
 [Recent Files]
-File1[$e]=$HOME/.config/hypr/background-changer/img/5.jpg
-File10[$e]=$HOME/Pictures/screenshot_1755896848.png
-File2[$e]=$HOME/.config/hypr/background-changer/img/6.png
-File3[$e]=$HOME/.config/hypr/background-changer/img/8.jpg
-File4[$e]=$HOME/.config/hypr/background-changer/img/9.jpg
-File5[$e]=$HOME/Pictures/img/5.jpg
-File6[$e]=$HOME/Pictures/img/6.jpg
-File7[$e]=$HOME/.config/hypr/background-changer/img/6.jpg
-File8[$e]=$HOME/Downloads/Adobe Express - file.png
-File9[$e]=$HOME/prog/Web/portfolio/static/images/webdesign/mockup.png
-Name1[$e]=5.jpg
-Name10[$e]=screenshot_1755896848.png
-Name2[$e]=6.png
-Name3[$e]=8.jpg
-Name4[$e]=9.jpg
-Name5[$e]=5.jpg
+File1[$e]=$HOME/.config/hypr/background-changer/img/6.png
+File10[$e]=$HOME/Pictures/screenshot_1757315444.png
+File2[$e]=$HOME/.config/hypr/background-changer/img/8.jpg
+File3[$e]=$HOME/.config/hypr/background-changer/img/9.jpg
+File4[$e]=$HOME/Pictures/img/5.jpg
+File5[$e]=$HOME/Pictures/img/6.jpg
+File6[$e]=$HOME/.config/hypr/background-changer/img/6.jpg
+File7[$e]=$HOME/Downloads/Adobe Express - file.png
+File8[$e]=$HOME/prog/Web/portfolio/static/images/webdesign/mockup.png
+File9[$e]=$HOME/Pictures/screenshot_1755896848.png
+Name1[$e]=6.png
+Name10[$e]=screenshot_1757315444.png
+Name2[$e]=8.jpg
+Name3[$e]=9.jpg
+Name4[$e]=5.jpg
+Name5[$e]=6.jpg
 Name6[$e]=6.jpg
-Name7[$e]=6.jpg
-Name8[$e]=Adobe Express - file.png
-Name9[$e]=mockup.png
+Name7[$e]=Adobe Express - file.png
+Name8[$e]=mockup.png
+Name9[$e]=screenshot_1755896848.png
 
 [SideBar]
 InformationSplitterSizes=220,255

@@ -28,3 +28,5 @@ x-scheme-handler/roblox-studio-auth=roblox-studio-auth.desktop
 x-scheme-handler/unknown=google-chrome.desktop
 video/mp4=com.google.Chrome.desktop
 x-scheme-handler/webcal=google-chrome.desktop
+x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/postman=Postman.desktop
