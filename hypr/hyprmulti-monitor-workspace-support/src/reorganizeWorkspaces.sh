@@ -1,10 +1,21 @@
 #!/bin/bash
 
-# Get number of connected monitors
-monitor_count=$(hyprctl monitors | grep 'Monitor' | wc -l)
+# Get all connected monitors
+mapfile -t monitors < <(hyprctl monitors -j | jq -r '.[].name')
+monitor_count=${#monitors[@]}
 
 # Compute max valid workspace ID
 max_workspace=$((monitor_count * 10))
+
+# Assign workspaces to new monitors
+for i in "${!monitors[@]}"; do
+    mon="${monitors[$i]}"
+    base=$((i * 10))
+    for ws in $(seq $((base+1)) $((base+10))); do
+        hyprctl dispatch workspace "$ws"
+        hyprctl dispatch moveworkspacetomonitor "$ws $mon"
+    done
+done
 
 # Get all windows and their workspaces
 mapfile -t windows < <(hyprctl clients -j | jq -r '.[] | "\(.address) \(.workspace.id)"')
@@ -18,7 +29,6 @@ for win in "${windows[@]}"; do
 
     if [ "$ws_id" -gt "$max_workspace" ]; then
         # Compute destination workspace
-        # Wrap to same relative position in the last available monitor
         relative_pos=$(( (ws_id - 1) % 10 + 1 ))
         target_ws=$(( (monitor_count - 1) * 10 + relative_pos ))
 
