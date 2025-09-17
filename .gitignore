@@ -85,6 +85,8 @@ logs/
 log/
 Postman/
 vesktop/
+teams-for-linux/
+*.pyc
 
 # fuck eww
 eww/
