@@ -1,0 +1,146 @@
+; FLTK preferences file format 1.0
+; vendor: github.com.Stazed.rakarrack.plus
+; application: rakarrack-plus
+
+[.]
+
+rakarrack-plus BankWindow X:1931
+rakarrack-plus BankWindow Y:51
+rakarrack-plus BankWindow W:943
+rakarrack-plus BankWindow H:1018
+rakarrack-plus Settings X:1931
+rakarrack-plus Settings Y:51
+rakarrack-plus Settings W:943
+rakarrack-plus Settings H:1018
+rakarrack-plus UserName:
+rakarrack-plus Preserve Gain/Master:0
+rakarrack-plus Metronome Volume:50
+rakarrack-plus Filter DC Offset:0
+rakarrack-plus Update Tap:0
+rakarrack-plus Limiter Position:0
+rakarrack-plus Limiter +6dB:0
+rakarrack-plus Recognize Optimization Harmonizer:0
+rakarrack-plus Recognize Optimization Stereo Harm:0
+rakarrack-plus Recognize Optimization Ring:0
+rakarrack-plus Harmonizer Downsample:5
+rakarrack-plus Harmonizer Up Quality:4
+rakarrack-plus Harmonizer Down Quality:2
+rakarrack-plus Reverbtron Downsample:5
+rakarrack-plus Reverbtron Up Quality:4
+rakarrack-plus Reverbtron Down Quality:2
+rakarrack-plus Convolotron Downsample:6
+rakarrack-plus Convolotron Up Quality:4
+rakarrack-plus Convolotron Down Quality:2
+rakarrack-plus Sequence Downsample:5
+rakarrack-plus Sequence Up Quality:4
+rakarrack-plus Sequence Down Quality:2
+rakarrack-plus Shifter Downsample:5
+rakarrack-plus Shifter Up Quality:4
+rakarrack-plus Shifter Down Quality:2
+rakarrack-plus Vocoder Downsample:5
+rakarrack-plus Vocoder Up Quality:4
+rakarrack-plus Vocoder Down Quality:2
+rakarrack-plus StereoHarm Downsample:5
+rakarrack-plus StereoHarm Up Quality:4
+rakarrack-plus StereoHarm Down Quality:2
+rakarrack-plus Distortion Resampling:2
+rakarrack-plus Distortion Up Quality:4
+rakarrack-plus Distortion Down Quality:2
+rakarrack-plus Overdrive Resampling:2
+rakarrack-plus Overdrive Up Quality:4
+rakarrack-plus Overdrive Down Quality:2
+rakarrack-plus Derelict Resampling:2
+rakarrack-plus Derelict Up Quality:4
+rakarrack-plus Derelict Down Quality:2
+rakarrack-plus DistBand Resampling:2
+rakarrack-plus DistBand Up Quality:4
+rakarrack-plus DistBand Down Quality:2
+rakarrack-plus StompBox Resampling:2
+rakarrack-plus StompBox Up Quality:4
+rakarrack-plus StompBox Down Quality:2
+rakarrack-plus Calibration:440
+rakarrack-plus Recognize Trigger:0.6
+rakarrack-plus Vocoder Bands:32
+rakarrack-plus FX_init_state:0
+rakarrack-plus Auto Assign:0
+rakarrack-plus UpSampling:0
+rakarrack-plus UpQuality:4
+rakarrack-plus DownQuality:4
+rakarrack-plus UpAmount:0
+rakarrack-plus Looper Size:1
+rakarrack-plus Bank Filename:/usr/share/rakarrack-plus/Default.rkrb
+rakarrack-plus User Directory:   
+rakarrack-plus Enable Background Image:0
+rakarrack-plus Background Image:/usr/share/rakarrack-plus/blackbg.png
+rakarrack-plus Auto Connect MIDI IN:1
+rakarrack-plus Auto Connect Jack:0
+rakarrack-plus Auto Connect Jack In:0
+rakarrack-plus MIDI Implementation:1
+rakarrack-plus MIDI Table:0
+rakarrack-plus MIDI IN Channel:1
+rakarrack-plus MIDI IN Harmonizer:1
+rakarrack-plus MIDI IN Stereo Harmonizer:1
+rakarrack-plus Harmonizer Quality:4
+rakarrack-plus StereoHarm Quality:4
+rakarrack-plus Sequence Quality:4
+rakarrack-plus Shifter Quality:4
+rakarrack-plus Tap Tempo Timeout:0
+rakarrack-plus Disable Warnings:0
+rakarrack-plus Enable Tooltips:1
+rakarrack-plus Focus Delay:0
+rakarrack-plus MIDI Table File:-1
+rakarrack-plus Jack Port 1:CONEXANT USB AUDIO Analog Stereo:playback_FR
+rakarrack-plus Auto Connect Num:0
+rakarrack-plus Jack Port In 1:Alder Lake PCH-P High Definition Audio Controller Digital Mi
++crophone:capture_FR
+rakarrack-plus Auto Connect In Num:1
+rakarrack-plus Trigger X:1931
+rakarrack-plus Trigger Y:51
+rakarrack-plus Trigger W:943
+rakarrack-plus Trigger H:1018
+rakarrack-plus Aux Source:0
+rakarrack-plus Aux Gain:0
+rakarrack-plus Aux Threshold:0
+rakarrack-plus Aux MIDI:1
+rakarrack-plus Aux Minimum:0
+rakarrack-plus Aux Maximum:127
+rakarrack-plus Principal X:1931
+rakarrack-plus Principal Y:51
+rakarrack-plus Principal W:1898
+rakarrack-plus Principal H:1018
+rakarrack-plus FontSize:8
+rakarrack-plus Font:0
+rakarrack-plus Background Color:925503744
+rakarrack-plus Foreground Color:1394475008
+rakarrack-plus Leds Color:12660480
+rakarrack-plus Labels Color:-336724224
+rakarrack-plus Schema:2
+rakarrack-plus Hide Effects:1
+rakarrack-plus Scale Window:0
+rakarrack-plus Bank Selected:2
+rakarrack-plus Preset Num:31
+rakarrack-plus Tuner On/Off:1
+rakarrack-plus MIDI Converter On/Off:0
+rakarrack-plus Midi Out Channel:1
+rakarrack-plus Trigger Adjust:4
+rakarrack-plus Velocity Adjust:50
+rakarrack-plus Converter Octave:2
+rakarrack-plus Use FFT:0
+rakarrack-plus Internal Metronome On/Off:0
+rakarrack-plus Internal Metronome Time:2
+rakarrack-plus Internal Metronome Volume:50
+rakarrack-plus Internal Metronome Tempo:100
+rakarrack-plus Internal Metronome Show:0
+rakarrack-plus Internal Metronome Sound:0
+rakarrack-plus Booster:1
+rakarrack-plus TapTempo On/Off:0
+rakarrack-plus TapTempo Input:0
+rakarrack-plus TapTempo Set:0
+rakarrack-plus Order X:1931
+rakarrack-plus Order Y:51
+rakarrack-plus Order W:943
+rakarrack-plus Order H:1018
+rakarrack-plus MIDI Learn X:2886
+rakarrack-plus MIDI Learn Y:51
+rakarrack-plus MIDI Learn W:943
+rakarrack-plus MIDI Learn H:503

@@ -87,6 +87,8 @@ Postman/
 vesktop/
 teams-for-linux/
 *.pyc
+VirtualBox/
+github-copilot/
 
 # fuck eww
 eww/
