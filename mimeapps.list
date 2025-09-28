@@ -11,6 +11,7 @@ x-scheme-handler/roblox-studio=roblox-studio.desktop;
 x-scheme-handler/roblox-studio-auth=roblox-studio-auth.desktop;
 image/png=org.kde.gwenview.desktop;
 video/mp4=com.google.Chrome.desktop;
+text/plain=staruml.desktop;
 
 [Default Applications]
 application/x-roblox-rbxl=roblox-studio.desktop
@@ -30,3 +31,4 @@ video/mp4=com.google.Chrome.desktop
 x-scheme-handler/webcal=google-chrome.desktop
 x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/postman=Postman.desktop
+text/plain=staruml.desktop

@@ -12,31 +12,31 @@ ThumbnailSplitterSizes=715,204
 MenuBar=Disabled
 
 [Recent Files]
-File1[$e]=$HOME/.config/hypr/background-changer/img/9.jpg
-File10[$e]=/usr/share/pixmaps/htop.png
-File2[$e]=$HOME/Pictures/img/5.jpg
-File3[$e]=$HOME/Pictures/img/6.jpg
-File4[$e]=$HOME/.config/hypr/background-changer/img/6.jpg
-File5[$e]=$HOME/Downloads/Adobe Express - file.png
-File6[$e]=$HOME/prog/Web/portfolio/static/images/webdesign/mockup.png
-File7[$e]=$HOME/Pictures/screenshot_1755896848.png
-File8[$e]=$HOME/Pictures/screenshot_1757315444.png
-File9[$e]=/usr/share/icons/breeze-dark/apps/16/accessories-text-editor.svg
-Name1[$e]=9.jpg
-Name10[$e]=htop.png
-Name2[$e]=5.jpg
+File1[$e]=$HOME/Pictures/img/5.jpg
+File10[$e]=$HOME/prog/Python/WebJam/sprites/Toog.png
+File2[$e]=$HOME/Pictures/img/6.jpg
+File3[$e]=$HOME/.config/hypr/background-changer/img/6.jpg
+File4[$e]=$HOME/Downloads/Adobe Express - file.png
+File5[$e]=$HOME/prog/Web/portfolio/static/images/webdesign/mockup.png
+File6[$e]=$HOME/Pictures/screenshot_1755896848.png
+File7[$e]=$HOME/Pictures/screenshot_1757315444.png
+File8[$e]=/usr/share/icons/breeze-dark/apps/16/accessories-text-editor.svg
+File9[$e]=/usr/share/pixmaps/htop.png
+Name1[$e]=5.jpg
+Name10[$e]=Toog.png
+Name2[$e]=6.jpg
 Name3[$e]=6.jpg
-Name4[$e]=6.jpg
-Name5[$e]=Adobe Express - file.png
-Name6[$e]=mockup.png
-Name7[$e]=screenshot_1755896848.png
-Name8[$e]=screenshot_1757315444.png
-Name9[$e]=accessories-text-editor.svg
+Name4[$e]=Adobe Express - file.png
+Name5[$e]=mockup.png
+Name6[$e]=screenshot_1755896848.png
+Name7[$e]=screenshot_1757315444.png
+Name8[$e]=accessories-text-editor.svg
+Name9[$e]=htop.png
 
 [SideBar]
 InformationSplitterSizes=220,255
 IsVisible ViewMode=true
-SideBarSplitterSizes=191,1703
+SideBarSplitterSizes=245,1674
 
 [ThumbnailView]
 Sorting=Sorting::Rating

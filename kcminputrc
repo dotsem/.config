@@ -1,6 +1,9 @@
 [Keyboard]
 NumLock=0
 
+[Libinput][1267][12821][ELAN0524:01 04F3:3215 Touchpad]
+NaturalScroll=true
+
 [Libinput][7511][64096][Beken 2.4G Wireless Device]
 PointerAcceleration=-0.700
 PointerAccelerationProfile=1
