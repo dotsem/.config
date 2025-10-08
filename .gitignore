@@ -89,6 +89,11 @@ teams-for-linux/
 *.pyc
 VirtualBox/
 github-copilot/
+figma-linux/
+Windsurf/
+
+*/Cache*/
+*/cache*/
 
 # fuck eww
 eww/

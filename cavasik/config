@@ -1,12 +1,12 @@
 [general]
-bars = 6
+bars = 46
 autosens = 1
 sensitivity = 100.0
 framerate = 60
 [input]
 method = pulse
 [output]
-channels = stereo
+channels = mono
 mono_option = average
 method = raw
 raw_target = /dev/stdout
