@@ -91,6 +91,11 @@ VirtualBox/
 github-copilot/
 figma-linux/
 Windsurf/
+1Password/
+hypr_aes_key_v1
+*1password.json
+*.key
+vpn_configs.json
 
 */Cache*/
 */cache*/
