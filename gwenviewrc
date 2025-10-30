@@ -12,31 +12,31 @@ ThumbnailSplitterSizes=715,204
 MenuBar=Disabled
 
 [Recent Files]
-File1[$e]=$HOME/prog/Web/portfolio/static/images/webdesign/mockup.png
-File10[$e]=$HOME/Documents/di/tech-talks/php-laravel/mpi-snippit-1.png
-File2[$e]=$HOME/Pictures/screenshot_1755896848.png
-File3[$e]=$HOME/Pictures/screenshot_1757315444.png
-File4[$e]=/usr/share/icons/breeze-dark/apps/16/accessories-text-editor.svg
-File5[$e]=/usr/share/pixmaps/htop.png
-File6[$e]=$HOME/prog/Python/WebJam/sprites/Toog.png
-File7[$e]=$HOME/Pictures/sddefault.jpg
-File8[$e]=$HOME/Pictures/screenshot_1759867655.png
-File9[$e]=$HOME/Documents/di/tech-talks/php-laravel/5f6fac1d51d2b.jpeg
-Name1[$e]=mockup.png
-Name10[$e]=mpi-snippit-1.png
-Name2[$e]=screenshot_1755896848.png
-Name3[$e]=screenshot_1757315444.png
-Name4[$e]=accessories-text-editor.svg
-Name5[$e]=htop.png
-Name6[$e]=Toog.png
-Name7[$e]=sddefault.jpg
-Name8[$e]=screenshot_1759867655.png
-Name9[$e]=5f6fac1d51d2b.jpeg
+File1[$e]=$HOME/Pictures/screenshot_1757315444.png
+File10[$e]=$HOME/Downloads/68ee121f-28f8-428c-8064-6e310adde39c.jpeg
+File2[$e]=/usr/share/icons/breeze-dark/apps/16/accessories-text-editor.svg
+File3[$e]=/usr/share/pixmaps/htop.png
+File4[$e]=$HOME/prog/Python/WebJam/sprites/Toog.png
+File5[$e]=$HOME/Pictures/sddefault.jpg
+File6[$e]=$HOME/Pictures/screenshot_1759867655.png
+File7[$e]=$HOME/Documents/di/tech-talks/php-laravel/5f6fac1d51d2b.jpeg
+File8[$e]=$HOME/Documents/di/tech-talks/php-laravel/mpi-snippit-1.png
+File9[$e]=$HOME/Pictures/img/1.png
+Name1[$e]=screenshot_1757315444.png
+Name10[$e]=68ee121f-28f8-428c-8064-6e310adde39c.jpeg
+Name2[$e]=accessories-text-editor.svg
+Name3[$e]=htop.png
+Name4[$e]=Toog.png
+Name5[$e]=sddefault.jpg
+Name6[$e]=screenshot_1759867655.png
+Name7[$e]=5f6fac1d51d2b.jpeg
+Name8[$e]=mpi-snippit-1.png
+Name9[$e]=1.png
 
 [SideBar]
 InformationSplitterSizes=220,255
 IsVisible ViewMode=true
-SideBarSplitterSizes=245,689
+SideBarSplitterSizes=245,1649
 
 [ThumbnailView]
 Sorting=Sorting::Rating

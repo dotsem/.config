@@ -96,6 +96,8 @@ hypr_aes_key_v1
 *1password.json
 *.key
 vpn_configs.json
+GIMP/
+obs-studio/
 
 */Cache*/
 */cache*/
