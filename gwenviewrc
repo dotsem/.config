@@ -1,5 +1,8 @@
 [Crop]
 CropAdvancedSettingsEnabled=true
+CropRatioHeight=1
+CropRatioIndex=1
+CropRatioWidth=1
 
 [General]
 LastUsedVersion=210800
@@ -12,31 +15,31 @@ ThumbnailSplitterSizes=715,204
 MenuBar=Disabled
 
 [Recent Files]
-File1[$e]=$HOME/Pictures/screenshot_1757315444.png
-File10[$e]=$HOME/Downloads/68ee121f-28f8-428c-8064-6e310adde39c.jpeg
-File2[$e]=/usr/share/icons/breeze-dark/apps/16/accessories-text-editor.svg
-File3[$e]=/usr/share/pixmaps/htop.png
-File4[$e]=$HOME/prog/Python/WebJam/sprites/Toog.png
-File5[$e]=$HOME/Pictures/sddefault.jpg
-File6[$e]=$HOME/Pictures/screenshot_1759867655.png
-File7[$e]=$HOME/Documents/di/tech-talks/php-laravel/5f6fac1d51d2b.jpeg
-File8[$e]=$HOME/Documents/di/tech-talks/php-laravel/mpi-snippit-1.png
-File9[$e]=$HOME/Pictures/img/1.png
-Name1[$e]=screenshot_1757315444.png
-Name10[$e]=68ee121f-28f8-428c-8064-6e310adde39c.jpeg
-Name2[$e]=accessories-text-editor.svg
-Name3[$e]=htop.png
-Name4[$e]=Toog.png
-Name5[$e]=sddefault.jpg
-Name6[$e]=screenshot_1759867655.png
-Name7[$e]=5f6fac1d51d2b.jpeg
-Name8[$e]=mpi-snippit-1.png
-Name9[$e]=1.png
+File1[$e]=$HOME/prog/Python/WebJam/sprites/Toog.png
+File10[$e]=$HOME/prog/go/2526-DI-004-Stratego/code/frontend/src/lib/assets/favicon.png
+File2[$e]=$HOME/Pictures/sddefault.jpg
+File3[$e]=$HOME/Pictures/screenshot_1759867655.png
+File4[$e]=$HOME/Documents/di/tech-talks/php-laravel/5f6fac1d51d2b.jpeg
+File5[$e]=$HOME/Documents/di/tech-talks/php-laravel/mpi-snippit-1.png
+File6[$e]=$HOME/Pictures/img/1.png
+File7[$e]=$HOME/Downloads/68ee121f-28f8-428c-8064-6e310adde39c.jpeg
+File8[$e]=$HOME/Downloads/ChatGPT Image 2 nov 2025, 13_21_11.png
+File9[$e]=$HOME/prog/go/2526-DI-004-Stratego/code/frontend/static/favicon.png
+Name1[$e]=Toog.png
+Name10[$e]=favicon.png
+Name2[$e]=sddefault.jpg
+Name3[$e]=screenshot_1759867655.png
+Name4[$e]=5f6fac1d51d2b.jpeg
+Name5[$e]=mpi-snippit-1.png
+Name6[$e]=1.png
+Name7[$e]=68ee121f-28f8-428c-8064-6e310adde39c.jpeg
+Name8[$e]=ChatGPT Image 2 nov 2025, 13_21_11.png
+Name9[$e]=favicon.png
 
 [SideBar]
 InformationSplitterSizes=220,255
 IsVisible ViewMode=true
-SideBarSplitterSizes=245,1649
+SideBarSplitterSizes=245,694
 
 [ThumbnailView]
 Sorting=Sorting::Rating

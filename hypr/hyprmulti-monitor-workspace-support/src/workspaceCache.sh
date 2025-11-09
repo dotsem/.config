@@ -54,6 +54,23 @@ save_workspaces() {
 }
 
 release_workspaces() {
+    # Wait for reorganizeWorkspaces lock to be released (if present)
+    LOCK_FILE="${XDG_RUNTIME_DIR:-/tmp}/mmws_reorganize.lock"
+    if [ -f "$LOCK_FILE" ]; then
+        echo "Detected reorganize lock, waiting for reorganizeWorkspaces.sh to finish..."
+        max_loops=50  # ~10s with 0.2s sleep
+        i=0
+        while [ -f "$LOCK_FILE" ] && [ "$i" -lt "$max_loops" ]; do
+            sleep 0.2
+            i=$((i + 1))
+        done
+        if [ -f "$LOCK_FILE" ]; then
+            echo "Warning: reorganizeWorkspaces lock still present after timeout, continuing anyway."
+        else
+            echo "reorganizeWorkspaces finished, proceeding."
+        fi
+    fi
+
     if [ ! -f "$SAVE_FILE" ]; then
         echo "Error: No saved workspaces found at $SAVE_FILE"
         echo "Run '$0 save' first to save current workspaces"

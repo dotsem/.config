@@ -19,5 +19,6 @@
     "maxAge": 0,
     "blockedApps": []
   },
-  "silentMode": false
+  "silentMode": false,
+  "notifications": []
 }
