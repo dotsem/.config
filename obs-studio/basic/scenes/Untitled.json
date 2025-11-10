@@ -205,10 +205,10 @@
             "push-to-talk-delay": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.4": [],
-                "libobs.hide_scene_item.4": [],
                 "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": []
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -223,9 +223,9 @@
             "id": "pipewire-camera-source",
             "versioned_id": "pipewire-camera-source",
             "settings": {
-                "device_id": "v4l2_input.pci-0000_00_14.0-usb-0_5.2_1.0",
                 "format": "{\"encoded\":false,\"video_format\":4,\"width\":1280,\"height\":720}",
-                "framerate": "{\"framerate\":{\"numerator\":10.0,\"denominator\":1.0}}"
+                "framerate": "{\"framerate\":{\"numerator\":10.0,\"denominator\":1.0}}",
+                "device_id": "v4l2_input.pci-0000_00_14.0-usb-0_5.2_1.0"
             },
             "mixers": 0,
             "sync": 0,
@@ -302,7 +302,7 @@
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -8,
+    "scaling_level": -12,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "modules": {
