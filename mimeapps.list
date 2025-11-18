@@ -12,6 +12,7 @@ x-scheme-handler/roblox-studio-auth=roblox-studio-auth.desktop;
 image/png=org.kde.gwenview.desktop;
 video/mp4=com.google.Chrome.desktop;
 text/plain=libreoffice-writer.desktop;staruml.desktop;
+application/x-desktop=code.desktop;
 
 [Default Applications]
 application/x-roblox-rbxl=roblox-studio.desktop
